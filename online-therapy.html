@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Therapy Session</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome CDN -->
+  <style>
+    /* Styles for Online therapy section */
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+
+    .service {
+      width: 200px;
+      margin: 10px;
+      padding: 20px;
+      background-color: #e5f13462;
+      border-radius: 10px;
+      text-align: center;
+      height: 200px;
+    }
+
+    .service h2 {
+      margin-bottom: 10px;
+      font-size: 1.2em;
+      color: rgb(2, 139, 98);
+    }
+
+    .service button {
+      padding: 8px 16px;
+      background-color: #f2ff3d;
+      color: rgb(0, 0, 0);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      align-self: bottom;
+    }
+
+    .service button:hover {
+      background-color: #080808;
+      color: white;
+    }
+    form {
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 5px;
+      }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 5px 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    
+    textarea {
+      height: 100px;
+    }
+    
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-right: 5px;
+    }
+     /* Styles for Online therapy section */
+  .therapy-info {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #fffed0;
+    border-radius: 10px;
+  }
+
+  .therapy-info h2 {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+
+  .therapy-info p {
+    color: #666666;
+    font-size: 1.1em;
+    line-height: 1.6;
+  }
+
+  .additional-info {
+    background-color: #fffedd;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 40px;
+  }
+
+  .additional-info h3 {
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+
+  .additional-info ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  .additional-info li {
+    color: #666;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    line-height: 1.6;
+  }
+  .request-button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .request-button:hover {
+    background-color: #45a049;
+  }
+  .back-button-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .back-button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #FF5733;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .back-button:hover {
+    background-color: #FF0000;
+  }
+
+  /* Additional styles for arranging images horizontally */
+  .image-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  .image-container img {
+    width: 100%;
+  }
+  
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="nav-left">
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about-us.html">About Us</a></li>
+          <li><a href="./personal-care.html">Personal Care Assistance</a></li>
+          <li><a href="./online-therapy.html">Online Therapy Session</a></li>
+        </ul>
+      </div>
+      
+    </nav>
+  </header>
+  <section class="therapy-info">
+    <h2>Online Therapy Session</h2>
+    <div class="image-container">
+      <img src="therapy4.jpg" alt="Online Therapy 1">
+     
+    </div>
+    <p>Our online therapy sessions offer convenient and accessible mental health support for seniors.</p>
+    <p>Whether you're dealing with anxiety, depression, or simply need someone to talk to, our experienced therapists are here to help.</p>
+    <button class="request-button" onclick="openTherapyRequestForm()">Request Online Therapy Session</button>
+
+  </section>
+  <div class="image-container">
+    <img src="therapy1.jpg" alt="Online Therapy 1">
+    
+  </div>
+  <section class="form-container" style="display: none;">
+    <form id="therapy-form" onsubmit="return handleSubmit()">
+      <div class="form-group">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+      <div class="form-group">
+        <label for="reason">Reason for Therapy:</label>
+        <textarea id="reason" name="reason" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required>
+      </div>
+      <div class="form-group">
+        <label for="time">Time:</label>
+        <input type="time" id="time" name="time" required>
+      </div>
+      <div class="form-group">
+        <label for="communication-method">Preferred Communication Method:</label>
+        <select id="communication-method" name="communication-method" required>
+          <option value="video-call">Video Call</option>
+          <option value="phone-call">Phone Call</option>
+          <option value="chat">Chat</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <button type="submit">Submit Request</button>
+      </div>
+    </form>
+    <div class="back-button-container">
+      <button class="back-button" onclick="goBack()">Back</button>
+    </div>
+  </section>
+
+  <section class="additional-info">
+    <h3>Benefits of Online Therapy:</h3>
+    <ul>
+      <li><b>Convenience:</b> Access therapy sessions from the comfort of your home.</li>
+      <li><b>Flexibility:</b> Schedule appointments that fit your schedule.</li>
+      <li><b>Accessibility:</b> Overcome barriers like transportation or mobility issues.</li>
+      <li><b>Confidentiality:</b> Ensure privacy and confidentiality during sessions.</li>
+    </ul>
+  </section>
+  <script>
+    function handleSubmit() {
+      // Check if all fields are filled
+      var form = document.getElementById('therapy-form');
+      var inputs = form.querySelectorAll('input, textarea, select');
+      var isValid = true;
+      inputs.forEach(function(input) {
+        if (!input.value.trim()) {
+          isValid = false;
+        }
+      });
+      if (!isValid) {
+        alert('Please fill out all fields.');
+        return false;
+      }
+      // Show thank you message
+      alert('Thank you for your therapy session request!');
+      // Redirect to online therapy page
+      window.open('online-therapy.html', "_blank");
+      return true;
+    }
+    function openTherapyRequestForm() {
+      document.querySelector('.therapy-info').style.display = 'none';
+      document.querySelector('.form-container').style.display = 'block';
+    }
+    function goBack() {
+      document.querySelector('.therapy-info').style.display = 'block';
+      document.querySelector('.form-container').style.display = 'none';
+    }
+  </script>
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <h2>Elderly Help Care Hub</h2>
+      </div>
+      <div class="footer-info">
+        
+        <h3>Contact Us</h3>
+        <p>30, Marlborough grange </p>
+        <p>Leeds</p>
+        <p>LS8 4NE</p>
+        <p>Phone: 07909327547</p>
+        <p>Email: info@elderlycarehub.com</p>
+     </div>
+      <div class="footer-nav">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about-us.html">About Us</a></li>
+          <li><a href="./personal-care.html">Personal Care Assistance</a></li>
+          <li><a href="./online-therapy.html">Online Therapy Session</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <ul>
+          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Elderly Help Care Hub. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

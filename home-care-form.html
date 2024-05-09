@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Care Assistance Form</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<style>
+/* Form styles */
+form {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+
+.form-group label {
+  width: 30%;
+  margin-right: 10px;
+  text-align: right;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+  width: 100%;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+textarea {
+  height: 100px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+/* Icon styles */
+.form-group i {
+  margin-right: 5px;
+  color: #333;
+}
+
+/* Layout adjustments */
+.form-group select {
+  width: 100%;
+}
+
+/* Emergency Contact Information styles */
+.form-group:nth-child(11) label {
+  font-weight: bold;
+}
+
+</style>
+<body>
+  <header>
+    <nav>
+        <div class="nav-left">
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about-us.html">About Us</a></li>
+            <li><a href="./personal-care.html">Personal Care Assistance</a></li>
+            <li><a href="./online-therapy.html">Online Therapy Session</a></li>
+          </ul>
+        </div>
+        
+      </nav>
+    <h3>Home Care Assistance Request Form</h3>
+  </header>
+
+  <section class="form-container">
+    <form id="personal-care-form" onsubmit="return handleSubmit()">
+      <div class="form-group">
+        <label for="name"><i class="fas fa-user"></i>First Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="name"><i class="fas fa-user"></i>Last Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="contact-info"><i class="fas fa-phone"></i> Phone number:</label>
+        <input type="text" id="contact-info" name="contact-info" placeholder="+44" required>
+      </div>
+      <div class="form-group">
+        <label for="address"><i class="fas fa-map-marker-alt"></i> Street Name:</label>
+        <input type="text" id="address" name="address" required>
+      </div>
+      <div class="form-group">
+        <label for="address"><i class="fas fa-map-marker-alt"></i>Post Code:</label>
+        <input type="text" id="address" name="address" required>
+      </div>
+      <div class="form-group">
+        <label for="address"><i class="fas fa-map-marker-alt"></i>City:</label>
+        <input type="text" id="address" name="address" required>
+      </div>
+      <div class="form-group">
+        <label for="duration"><i class="fas fa-hourglass-half"></i> Duration (in minutes):</label>
+        <input type="number" id="duration" name="duration" style="width: 96%;">
+      </div>
+      <div class="form-group">
+        <label for="preferred-caregiver"><i class="fas fa-user-friends"></i> Nature of Request:</label>
+        <select id="country" name="country">
+          <option value="bath"> Bathing and grooming assistance</option>
+          <option value="Mobility">Mobility support</option>
+          <option value="Meal">Meal preparation</option>
+          <option value="Toileting">Toileting assistance</option>
+          <option value="Household"> Household chores</option>
+        </select>
+      <div class="form-group">
+        <label for="preferred-caregiver"><i class="fas fa-user-friends"></i> Preferred Caregiver:</label>
+        <select id="gender" name="gender">
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="emergency-contact"><i class="fas fa-exclamation-triangle"></i> Emergency Contact:</label>
+        <input type="text" id="emergency-contact" name="emergency-contact" required>
+      </div>
+      <div class="form-group">
+        <label>
+          <input type="checkbox" id="consent" name="consent" required>
+          I hereby consent to receive home care assistance and acknowledge the terms and conditions.
+        </label>
+      </div>
+      <div class="form-group">
+        <button type="submit"><i class="fas fa-paper-plane"></i> Submit Request</button>
+      </div>
+    </form>
+    <a href="./personal-care.html" class="back-button">Back</a>
+  </section>
+
+  <!-- Add Font Awesome Script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+
+  <script>
+    function handleSubmit() {
+      // Check if all fields are filled
+      var form = document.getElementById('personal-care-form');
+      var inputs = form.querySelectorAll('input, textarea, select');
+      var isValid = true;
+  
+      inputs.forEach(function(input) {
+        if (!input.value.trim()) {
+          isValid = false;
+        }
+      });
+  
+      if (!isValid) {
+        alert('Please fill out all fields.');
+        return false;
+      }
+  
+      // Show thank you message
+      alert('Thank you for your request!');
+  
+      // Redirect to personal care page
+      window.open("personal-care.html", "_blank");
+  
+      return true;
+    }
+  </script>
+  
+</body>
+</html>

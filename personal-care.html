@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elderly Help Care Hub</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome CDN -->
+  
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="nav-left">
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about-us.html">About Us</a></li>
+          <li><a href="./personal-care.html">Personal Care Assistance</a></li>
+          <li><a href="./online-therapy.html">Online Therapy Session</a></li>
+        </ul>
+      </div>
+      
+    </nav>
+  </header>
+  <center>
+    <section class="services">
+      <div class="service">
+        <div class="service-content">
+          <div class="service-front">
+            <img src="./home-care-image.jpg" alt="Home Care">
+          </div>
+          <div class="service-back">
+            Assistance with daily activities encompasses essential tasks like bathing, grooming, and meal preparation for individuals requiring support. Caregivers provide hands-on assistance, ensuring personal hygiene, grooming needs, and nutritious meals are met, promoting well-being and independence while fostering a comfortable and dignified living environment for those in need.
+          </div>
+        </div>
+        <h2>Home Care</h2>
+        <p>Bathing, grooming, and meal preparation.</p>
+        <button onclick="openPersonalCareForm()">Request Assistance</button>
+      </div>
+      
+      <div class="service">
+        <div class="service-content">
+          <div class="service-front">
+            <img src="./companionship-image.jpg" alt="Companionship">
+          </div>
+          <div class="service-back">
+            Engaging companionship to combat loneliness and provide emotional support for the elderly. Our caregivers offer meaningful interactions and activities, fostering a sense of companionship and well-being while ensuring the emotional needs of individuals are met.
+          </div>
+        </div>
+        <h2>Companionship</h2>
+        <p>Combat loneliness and emotional support.</p>
+        <button onclick="openPersonalCareForm1()">Request Assistance</button>
+      </div>
+      
+      <div class="service">
+        <div class="service-content">
+          <div class="service-front">
+            <img src="./medication-management-image.jpg" alt="Medication Management">
+          </div>
+          <div class="service-back">
+            Our caregivers provide reminders and assistance with medication schedules, ensuring individuals adhere to their prescribed treatments.
+          </div>
+        </div>
+        <h2>Medication</h2>
+        <p>Reminders and assistance with medication schedules. </p>
+        <button onclick="openPersonalCareForm2()">Request Assistance</button>
+      </div>
+    </section>
+    
+    
+  </center>
+  <script>
+    function openPersonalCareForm() {
+      window.open("home-care-form.html", "_blank");
+    }
+    function openPersonalCareForm1() {
+      window.open("campionship-care-form.html");
+    }
+    function openPersonalCareForm2() {
+      window.open("Medication-management-form.html", "_blank");
+    }
+  </script>
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <h2>Elderly Help Care Hub</h2>
+      </div>
+      <div class="footer-info">
+        
+        <h3>Contact Us</h3>
+        <p>30, Marlborough grange </p>
+        <p>Leeds</p>
+        <p>LS8 4NE</p>
+        <p>Phone: 07909327547</p>
+        <p>Email: info@elderlycarehub.com</p>
+     </div>
+      <div class="footer-nav">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about-us.html">About Us</a></li>
+          <li><a href="./personal-care.html">Personal Care Assistance</a></li>
+          <li><a href="./online-therapy.html">Online Therapy Session</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <ul>
+          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Elderly Help Care Hub. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

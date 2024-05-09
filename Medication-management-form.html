@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medication Management Form</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<style>
+  form {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+  }
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+  width: 100%;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+textarea {
+  height: 100px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+</style>
+<body>
+  <header>
+    <nav>
+      <div class="nav-left">
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about-us.html">About Us</a></li>
+          <li><a href="./personal-care.html">Personal Care Assistance</a></li>
+          <li><a href="./online-therapy.html">Online Therapy Session</a></li>
+        </ul>
+      </div>
+      
+    </nav>
+    <h3>Medication Management Form</h3>
+  </header>
+
+  <section class="form-container">
+    <form id="medication-management-form" onsubmit="return handleSubmit()">
+      <div class="form-group">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="age">Age:</label>
+        <select id="age" name="age">
+          <option value="60-69">60-69</option>
+          <option value="70-79">70-79</option>
+          <option value="80-89">80-89</option>
+          <option value="90+">90+</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Gender:</label><br>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" name="phone" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label>Medication Schedule:</label><br>
+        <label for="medication-name">Medication Name:</label>
+        <input type="text" id="medication-name" name="medication-name" required><br>
+        <label for="dosage">Dosage:</label>
+        <input type="text" id="dosage" name="dosage" required><br>
+        <label for="frequency">Frequency:</label>
+        <select id="frequency" name="frequency">
+          <option value="Daily">Daily</option>
+          <option value="Weekly">Weekly</option>
+          <option value="Monthly">Monthly</option>
+        </select><br>
+        <label for="time-of-day">Time(s) of Day:</label>
+        <input type="text" id="time-of-day" name="time-of-day" required><br>
+        <label for="special-instructions">Special Instructions:</label>
+        <textarea id="special-instructions" name="special-instructions" rows="4"></textarea>
+      </div>
+      <div class="form-group">
+        <label>
+          <input type="checkbox" id="consent" name="consent" required>
+          By submitting this form, I acknowledge that I am voluntarily providing medication information and consent to its use for medical purposes only.
+        </label>
+      </div>
+      <div class="form-group">
+        <button type="submit">Submit Request</button>
+      </div>
+    </form>
+    <a href="./personal-care.html" class="back-button">Back</a>
+  </section>
+
+  <!-- Add Font Awesome Script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+
+  <script>
+    function handleSubmit() {
+      // Check if all fields are filled
+      var form = document.getElementById('medication-management-form');
+      var inputs = form.querySelectorAll('input, textarea, select');
+      var isValid = true;
+
+      inputs.forEach(function(input) {
+        if (!input.value.trim()) {
+          isValid = false;
+        }
+      });
+
+      if (!isValid) {
+        alert('Please fill out all fields.');
+        return false;
+      }
+
+      // Show thank you message
+      alert('Thank you for providing medication information!');
+
+      return true;
+    }
+  </script>
+
+</body>
+</html>

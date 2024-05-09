@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<title>About Us</title> <!-- Change the title to "About Us" -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome CDN -->
+<style>
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fffbc3;
+    padding: 2px;
+  }
+  
+  .nav-left ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-left ul li {
+    display: inline;
+    font-size: 22px;
+    font-weight: bolder;
+  }
+  
+  .nav-left ul li a {
+    color: rgb(5, 0, 0);
+    text-decoration: none;
+    padding: 20px;
+  }
+  
+  .nav-left ul li a:hover {
+    background-color: #f2ff3d;
+  }
+  
+  .nav-right .search-form input[type="text"] {
+    padding: 6px;
+    width: 50%;
+  }
+  
+  .nav-right .search-form button {
+    padding: 6px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .nav-right .search-form button:hover {
+    background-color: #0056b3;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Style inputs */
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  /* Style the container/contact section */
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 10px;
+  }
+  .nav-right .search-form {
+  display: flex;
+  align-items: center;
+}
+
+.nav-right .search-form input[type="text"] {
+  
+  width: 150px;
+  padding: 3px; /* Adjust padding */
+  border: 1px solid #ccc; /* Add border */
+  border-radius: 5px; /* Add border radius */
+  margin-right: 10px; /* Add margin between input and button */
+  margin-top: 16px;
+}
+
+.nav-right .search-form button {
+  padding: 3px 10px; /* Adjust padding */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px; /* Add border radius */
+  cursor: pointer;
+}
+
+.nav-right .search-form button:hover {
+  background-color: #0056b3;
+}
+  /* Create two columns that float next to each other */
+  .column {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    padding: 15px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  #about {
+    background-color: #fff;
+    padding: 50px;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #007bff;
+    font-size: 28px; /* Increase font size */
+  }
+  
+  hr {
+    border: 1px solid #007bff;
+    margin: 20px 0;
+  }
+  
+  p {
+    font-size: 18px; /* Increase font size */
+    line-height: 1.6;
+  }
+  
+  .team-member {
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+  }
+  
+  .team-member img {
+    border-radius: 20%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+  
+  .team-member h3 {
+    margin-top: 20px;
+    color: #007bff;
+  }
+  
+  .team-member p {
+    color: #666;
+  }
+  
+  .w3-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .w3-button:hover {
+    background-color: #0056b3;
+  }
+</style>
+<body>
+  <nav>
+    <div class="nav-left">
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about-us.html">About Us</a></li>
+        <li><a href="./personal-care.html">Personal Care Assistance</a></li>
+        <li><a href="./online-therapy.html">Online Therapy Session</a></li>
+      </ul>
+    </div>
+    
+  </nav>
+<!-- Page Start -->
+<div id="home" class="w3-content" style="max-width:1564px">
+  
+
+<!-- About -->
+<div id="about" class="w3-container w3-padding-32">
+<h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">About Us</h2>
+<p>Welcome!
+<br>we are dedicated to providing exceptional healthcare services to our community. With a team of experienced doctors, nurses, and staff, we strive to deliver personalized care tailored to meet the unique needs of each patient.
+<br>
+<div class="w3-row w3-section">
+  <div class="w3-third w3-container w3-black w3-large" style="height:250px">
+  <p>Helping elderly people is a noble endeavor that requires compassion, patience, and understanding. As caregivers, we dedicate ourselves to providing essential assistance and support to ensure the well-being and quality of life of the elderly population.</p>
+  </div>
+  <div class="w3-third w3-center w3-large w3-dark-grey w3-text-white" style="height:250px">
+  <p>In assisting with daily activities, we strive to promote independence while offering a helping hand when needed. This includes tasks such as bathing, grooming, meal preparation, and medication management. By addressing these fundamental needs, we enable elderly individuals to maintain their dignity and autonomy.</p>
+  </div>
+  <div class="w3-third w3-center w3-large w3-grey w3-text-white" style="height:250px">
+  <p>Beyond physical care, we recognize the importance of companionship and emotional support in combating loneliness and isolation. Our caregivers engage in meaningful interactions, fostering a sense of companionship and connection.</p>
+  </div>
+</div>
+<hr>
+<center>
+  <div class="mission">
+    <h2><b>Our Mission</b></h2>
+    <p>Our mission is to promote health and wellness by offering comprehensive medical services in a compassionate and supportive environment.</p>
+  
+    <h3><b>We are committed to:</b></h3>
+  
+    <p><b>Quality Care:</b> Providing high-quality medical care that exceeds our patients' expectations.</p>
+  
+    <p><b>Patient-Centered Approach:</b> Placing our patients at the center of everything we do and involving them in their healthcare decisions.</p>
+  
+    <p><b>Continuous Improvement:</b> Continuously improving our services through ongoing education, innovation, and feedback from our patients.</p>
+  
+    <hr>
+  </div>
+  <center><b>Meet Our Team</b></center>
+  <br>
+   Our team consists of skilled healthcare professionals who are passionate about helping others. From board-certified physicians to dedicated support staff, each member of our team plays a vital role in ensuring the well-being of our patients.
+   <br>
+  
+</div>
+<div class="w3-row-padding w3-grayscale">
+
+<div class="w3-col l3 m6 w3-margin-bottom">
+  <img src="./team2.png" alt="Mike" style="width:70%">
+<h3>John Doe</h3>
+<p class="w3-opacity">CEO & Founder</p>
+<p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+
+</div>
+
+<div class="w3-col l3 m6 w3-margin-bottom">
+  <img src="./team2.png" alt="Mike" style="width:70%">
+<h3>Jane Doe</h3>
+<p class="w3-opacity">Assistant</p>
+<p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+
+</div>
+
+<div class="w3-col l3 m6 w3-margin-bottom">
+<img src="./team2.png" alt="Mike" style="width:70%">
+<h3>Mike Ross</h3>
+<p class="w3-opacity">Assistant</p>
+<p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+
+</div>
+
+<div class="w3-col l3 m6 w3-margin-bottom">
+  <img src="./team2.png" alt="Mike" style="width:70%">
+<h3>Dan Star</h3>
+<p class="w3-opacity">Assistant</p>
+<p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+
+</div>
+
+</div>
+
+<!-- Page End -->
+</div>
+<div class="container">
+  <div style="text-align:center">
+    <h2>Contact Us</h2>
+    <p>Leave us a message:</p>
+  </div>
+  <div class="row">
+    <div class="column">
+      <img src="./help.jpg" style="width:100%">
+    </div>
+    <div class="column">
+      <form id="contactForm">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        
+        
+        <label for="subject">Message</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+</div>
+<footer>
+  <div class="footer-content">
+    <div class="footer-logo">
+      <h2>Elderly Help Care Hub</h2>
+    </div>
+    <div class="footer-info">
+      
+      <h3>Contact Us</h3>
+      <p>30, Marlborough grange </p>
+      <p>Leeds</p>
+      <p>LS8 4NE</p>
+      <p>Phone: 07909327547</p>
+      <p>Email: info@elderlycarehub.com</p>
+   </div>
+    <div class="footer-nav">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about-us.html">About Us</a></li>
+        <li><a href="./personal-care.html">Personal Care Assistance</a></li>
+        <li><a href="./online-therapy.html">Online Therapy Session</a></li>
+      </ul>
+    </div>
+    <div class="footer-social">
+      <h3>Follow Us</h3>
+      <ul>
+        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2024 Elderly Help Care Hub. All rights reserved.</p>
+  </div>
+</footer>
+<script>
+  document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent form submission
+    var fname = document.getElementById("fname").value;
+    var lname = document.getElementById("lname").value;
+    var country = document.getElementById("country").value;
+    var subject = document.getElementById("subject").value;
+
+    if (fname && lname && country && subject) {
+      // All fields are filled, show thank you message
+      alert("Thank you for contacting us!");
+      // Clear the form fields
+      document.getElementById("contactForm").reset();
+    } else {
+      // Not all fields are filled, display an alert
+      alert("Please fill out all fields before submitting.");
+    }
+  });
+</script>
+</body>
+</html>

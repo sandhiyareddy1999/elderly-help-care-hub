@@ -1,0 +1,511 @@
+/* Global Styles */
+body {
+    font-family:  'Calibri', 'Trebuchet MS', sans-serif, Times, serif, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+  
+  }
+  
+  header {
+    background-color: #f2f2f2;
+    padding: 0px;
+    text-align: center;
+  }
+  
+  h1, h2 {
+    color: #fffefe;
+  }
+  
+  /* Buttons */
+  .btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Cards */
+  .cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+/* CSS for Service Cards */
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Flipping transition effect */
+.service {
+  perspective: 1000px;
+  width: calc(30% - 20px);
+  height: 500px;
+  background-color: #cdf4fd;
+  border-radius: 3px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  margin: 10px;
+  margin-bottom: 100px;
+  margin-top: 50px;
+  position: relative;
+}
+
+.service:hover .service-content {
+  transform: rotateY(180deg);
+}
+
+.service-content {
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.service-front,
+.service-back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 19px;
+}
+
+.service-back {
+  transform: rotateY(180deg);
+  
+}
+
+.service h2{
+  position: absolute;
+  bottom: 150px; /* Adjust position as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 22px;
+}
+.service p {
+  position: absolute;
+  bottom: 45px; /* Adjust position as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  align-self: baseline;
+  font-size: 20px;
+}
+.service button {
+  position: absolute;
+  bottom: 10px; /* Adjust position as needed */
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+  font-size: 26px;
+}
+
+.service h2 {
+  color: #100194; /* Adjust heading color */
+  margin-top: 20px; /* Adjust top margin */
+}
+
+.service p {
+  color: #666;
+}
+
+.service img {
+  max-width: 100%; /* Adjust the maximum width of the image */
+  max-height: 300px; /* Adjust the maximum height of the image */
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.service button {
+  background-color: #e5ff00;
+  color: #000000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: 'Calibri', 'Trebuchet MS', sans-serif, Times, serif, sans-serif;
+  font-weight: bolder;
+  font-stretch: expanded;
+}
+
+.service button:hover {
+  background-color: #0056b3;
+}
+
+
+  
+  /* Appointments */
+  .appointments {
+    padding: 20px;
+  }
+  
+ /* Navigation Styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fffbc3;
+    padding: 15px;
+  }
+  
+  .nav-left ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-left ul li {
+    display: inline;
+    font-size: 22px;
+    font-weight: bolder;
+  }
+  
+  .nav-left ul li a {
+    color: rgb(5, 0, 0);
+    text-decoration: none;
+    padding: 20px;
+  }
+  
+  .nav-left ul li a:hover {
+    background-color: #f2ff3d;
+  }
+  
+  .nav-right .search-form input[type="text"] {
+    padding: 6px;
+    width: 50%;
+
+  }
+  
+  .nav-right .search-form button {
+    padding: 6px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .nav-right .search-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Header Styles */
+  header {
+    text-align: center;
+  }
+  
+  .hero {
+    background-image: url('Older.jpg'); /* Replace 'hero-image.jpg' with your actual image path */
+    background-size: cover;
+    background-position: left;
+    color: white;
+    padding: 150px 0px;
+  }
+
+  h1, h2 {
+    align-items: left;
+    color: #f2ff3d;
+  }
+  
+  /* Additional styles for the "How We Can Help You" section */
+  .features {
+    padding: 20px;
+  }
+  
+  .feature-card {
+    display: flex;
+    justify-content:center;
+   
+  }
+  
+  .feature-item {
+    background-color: #c9f3fd;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    box-shadow: 0 20px 10px rgba(59, 95, 255, 0.466);
+  }
+  
+  .help-card {
+    display: flex;
+    justify-content:center;
+   
+  }
+  
+  .help-item {
+    background-color: #c9f3fd;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    box-shadow: 0 20px 10px rgba(59, 95, 255, 0.466);
+  }
+
+  
+
+
+
+
+  .form-container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 30px rgba(231, 247, 8, 0.568);
+  }
+  
+ 
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  input[type="datetime-local"],
+  select,
+  textarea {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+ 
+  
+  input[type="checkbox"] {
+    margin-right: 5px;
+  }
+
+  /* CSS for Form Button */
+.form-group button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .form-group button:hover {
+    background-color: #0056b3;
+  }
+  header h3 {
+    font-size: 24px; /* Adjust the font size as needed */
+    font-weight: bold; /* Make the text bold */
+    color: #000000; /* Set the text color */
+    margin-bottom: 20px; /* Add margin at the bottom for spacing */
+    background-color: #f2ff3d;
+    padding: 2%;
+  }
+  footer {
+    background-color: #2e2e2e;
+    color: #fff;
+    padding: 40px 0;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .footer-logo h2 {
+    font-size: 24px;
+  }
+  
+  .footer-info,
+  .footer-nav,
+  .footer-social {
+    margin: 20px;
+  }
+  
+  .footer-info h3,
+  .footer-nav h3,
+  .footer-social h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-info p {
+    margin-bottom: 5px;
+  }
+  
+  .footer-nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .footer-nav ul li {
+    margin-bottom: 5px;
+  }
+  
+  .footer-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer-social ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .footer-social ul li {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+  }
+/* Styling for mission statement */
+.mission {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f3f8a9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.mission b {
+  color: #007bff; /* Blue color for bold text */
+}
+
+.mission hr {
+  border: 1px solid #ccc;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.popup-container {
+  font-family:'Calibri', 'Trebuchet MS', sans-serif, Times, serif, sans-serif;
+  font-size: 18px;
+  width: 400px;
+  height: 500px;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #80ffb1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  z-index: 9999;
+}
+
+.popup-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.popup-icon {
+  font-size: 100px;
+  margin-bottom: 10px;
+}
+
+.popup-text {
+  font-family:'Calibri', 'Trebuchet MS', sans-serif, Times, serif, sans-serif;
+  font-size: 18px;
+  text-align: center;
+}
+
+.popup-close {
+  position: absolute;
+  top: 5px; /* Adjust the top position as needed */
+  right: 20px; /* Adjust the right position as needed */
+  font-size: 20px; /* Increase the font size */
+  cursor: pointer;
+  color: red;
+}
+
+
+.popup-input {
+  width: 100%; /* Match the width of the container */
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.popup-submit {
+  width: 100%; /* Match the width of the container */
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.popup-submit:hover {
+  background-color: #0056b3;
+}
+.back-button {
+  background-color: red; /* Change button background color to red */
+  color: white; /* Change button text color to white */
+  display: block; /* Make the button a block element */
+  width: 200px; /* Set button width */
+  padding: 10px; /* Add padding to the button */
+  margin: 20px auto; /* Center the button horizontally */
+  text-align: center; /* Center the text inside the button */
+  border: none; /* Remove button border */
+  border-radius: 5px; /* Add border radius */
+  text-decoration: none; /* Remove default link underline */
+}
+
+.back-button:hover {
+  background-color: darkred; /* Change button background color on hover */
+}
+/* Submit button styles */
+button[type="submit"] {
+  background-color: #007bff; /* Blue color */
+  color: white;
+  padding: 10px 20px; /* Adjust padding to make it bigger */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block; /* Make it a block element */
+  margin: 0 auto; /* Center horizontally */
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3; /* Darker shade of blue on hover */
+}

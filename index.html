@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elderly Help Care Hub</title>
+  <link rel="stylesheet" href="./style.css">
+  
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome CDN -->
+<style>
+  .dets {
+    column-count: 2;
+    column-gap: 40px;
+    column-rule-style: solid;
+    column-rule-width: 1px;
+    padding-top: 20px;
+  }
+
+  .icon {
+    color: #03a9f4; /* Icon color */
+    margin-right: 10px; /* Space between icon and text */
+  }
+
+  .service-info {
+    margin-bottom: 20px; 
+    margin-top: 20px;/* Space between paragraphs */
+  }
+
+  /* Additional styling for better readability */
+  p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="nav-left">
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about-us.html">About Us</a></li>
+          <li><a href="./personal-care.html">Personal Care Assistance</a></li>
+          <li><a href="./online-therapy.html">Online Therapy Session</a></li>
+        </ul>
+      </div>
+      
+    </nav>
+    <div class="hero">
+      <h1>Welcome to Elderly Help Care Hub</h1>
+      <p>Providing assistance and care for the elderly</p>
+      
+    </div>
+  </header>
+ <!-- Stacked popup container -->
+ <div id="popup" class="popup-container">
+  <span onclick="closePopup()" class="popup-close">Close &times;</span>
+  <div class="popup-content">
+    <i class="fas fa-user icon popup-icon"></i>
+    <p class="popup-text">Please fill out the form below:</p>
+    <input id="name" type="text" class="popup-input" placeholder="Name" style="width: 100%;">
+    <input id="contact" type="tel" class="popup-input" placeholder="Contact Number" style="width: 100%;">
+    <input id="email" type="email" class="popup-input" placeholder="Email" style="width: 100%;">
+    <select id="help" class="popup-input" style="width: 420px;">
+      <option value="" disabled selected>Type of Help Required</option>
+      <option value="Bathing and Grooming">Bathing and Grooming</option>
+      <option value="Meal Preparation">Meal Preparation</option>
+      <option value="Medication Management">Medication Management</option>
+      <option value="Other">Other Reason</option>
+    </select>
+    <textarea id="subject" name="subject" placeholder="Write the reason for contacting us, we'll get back to you..." style="height:70px; width: 100%;"></textarea>
+    <br>
+    <button onclick="submitForm()" class="popup-submit"><i class="fas fa-paper-plane"></i> Submit</button>
+  </div>
+</div>
+
+
+<!-- Details-->
+  <section class="features">
+    <h3>Why Choose Us?</h3>
+    <p>We are dedicated to providing top-quality care and assistance to the elderly.</p>
+    <div class="feature-card">
+      <div class="feature-item">
+        <h3>24/7 Support</h3>
+        <p>Our team is available round the clock to assist you with any needs or concerns.</p>
+      </div>
+      <div class="feature-item">
+        <h3>Experienced Caregivers</h3>
+        <p>Our caregivers are highly trained professionals with years of experience in elderly care.</p>
+      </div>
+      <div class="feature-item">
+        <h3>Customized Care Plans</h3>
+        <p>We tailor our care plans to meet the unique needs and preferences of each individual.</p>
+      </div>
+    </div>
+
+    <!-- Additional elements explaining how the website can help the elderly -->
+    <h3>How We Can Help You:</h3>
+    <div class="help-card">
+      <div class="help-item">
+        <h3>Assistance with Daily Activities</h3>
+        <p>Our caregivers provide support with bathing, grooming, medication reminders, and more.</p>
+      </div>
+      <div class="help-item">
+        <h3>Companionship</h3>
+        <p>We offer companionship services to alleviate loneliness and provide emotional support.</p>
+      </div>
+      <div class="help-item">
+        <h3>Medical Coordination</h3>
+        <p>We provide reminders and assistance with medication schedules, ensuring individuals adhere to their prescribed treatments.</p>
+      </div>
+      </div>
+        <div class="help-item">
+          <h3>Online Therapy Sessions</h3>
+          <p>We provide online therapy sessions to address mental health needs and offer emotional support remotely.</p>
+        </div>
+      </div>
+  </section>
+  
+
+
+
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <h2>Elderly Care Hub</h2>
+      </div>
+      <div class="footer-info">
+         
+        <h3>Contact Us</h3>
+        <p>30, Marlborough grange </p>
+        <p>Leeds</p>
+        <p>LS8 4NE</p>
+        <p>Phone: 07909327547</p>
+        <p>Email: info@elderlycarehub.com</p>
+      </div>
+      <div class="footer-nav">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about-us.html">About Us</a></li>
+          <li><a href="./personal-care.html">Personal Care Assistance</a></li>
+          <li><a href="./online_therapy.html">Online Therapy Session</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <ul>
+          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Elderly Care Hub. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Companionship Request Form</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<style>
+  form {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+  }
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+  width: 100%;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+textarea {
+  height: 100px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+</style>
+<body>
+  <header>
+    <nav>
+      <div class="nav-left">
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about-us.html">About Us</a></li>
+          <li><a href="./personal-care.html">Personal Care Assistance</a></li>
+          <li><a href="./online-therapy.html">Online Therapy Session</a></li>
+        </ul>
+      </div>
+      
+    </nav>
+    <h3>Companionship Request Form</h3>
+  </header>
+
+  <section class="form-container">
+    <form id="companionship-form" onsubmit="return handleSubmit()">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="age">Age:</label>
+        <select id="age" name="age">
+          <option value="60-69">60-69</option>
+          <option value="70-79">70-79</option>
+          <option value="80-89">80-89</option>
+          <option value="90+">90+</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required placeholder="+44">
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="preferred-activities">Preferred Activities:</label>
+        <select id="preferred-activities" name="preferred-activities">
+          <option value="Going for walks">Going for walks</option>
+          <option value="Reading books or newspapers">Reading books or newspapers</option>
+          <option value="Playing board games or cards">Playing board games or cards</option>
+          <option value="Gardening">Gardening</option>
+          <option value="Arts and crafts">Arts and crafts</option>
+          <option value="Watching movies or TV shows">Watching movies or TV shows</option>
+          <option value="Cooking or baking">Cooking or baking</option>
+          <option value="Other">Other</option>
+        </select>
+        <input type="text" id="other-activity-details" name="other-activity-details" placeholder="Please specify" style="display: none;">
+      </div>
+      <div class="form-group">
+        <label for="communication-method">Preferred Communication Method:</label>
+        <select id="communication-method" name="communication-method">
+          <option value="In-person visits">In-person visits</option>
+          <option value="Phone calls">Phone calls</option>
+          <option value="Video calls">Video calls</option>
+          <option value="Text messages">Text messages</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="availability">Availability:</label>
+        <select id="availability" name="availability">
+          <option value="Weekdays">Weekdays</option>
+          <option value="Weekends">Weekends</option>
+          <option value="Anytime">Anytime</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="comments">Additional Comments or Preferences:</label>
+        <textarea id="comments" name="comments" rows="4"></textarea>
+      </div>
+      <div class="form-group">
+        <label>Emergency Contact Information:</label><br>
+        <label for="emergency-name">Name:</label>
+        <input type="text" id="emergency-name" name="emergency-name" required><br>
+        <label for="relationship">Relationship:</label>
+        <input type="text" id="relationship" name="relationship" required><br>
+        <label for="emergency-phone">Phone Number:</label>
+        <input type="text" id="emergency-phone" name="emergency-phone" required>
+      </div>
+      <div class="form-group">
+        <label>
+          <input type="checkbox" id="consent" name="consent" required>
+          By submitting this form, I acknowledge that I am voluntarily seeking companionship and emotional support. I understand that my information will be used solely for the purpose of connecting with a companion.
+        </label>
+      </div>
+      <div class="form-group">
+        <button type="submit">Submit Request</button>
+      </div>
+    </form>
+    <a href="./personal-care.html" class="back-button">Back</a>
+  </section>
+
+  <!-- Add Font Awesome Script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+
+  <script>
+    function handleSubmit() {
+      // Check if all fields are filled
+      var form = document.getElementById('companionship-form');
+      var inputs = form.querySelectorAll('input, textarea, select');
+      var isValid = true;
+
+      inputs.forEach(function(input) {
+        if (!input.value.trim()) {
+          isValid = false;
+        }
+      });
+
+      if (!isValid) {
+        alert('Please fill out all fields.');
+        return false;
+      }
+
+      // Show thank you message
+      alert('Thank you for your request!');
+
+      // Redirect to personal care page
+      window.open("personal-care.html", "_blank");
+
+      return true;
+    }
+
+    document.getElementById("preferred-activities").addEventListener("change", function() {
+      var otherActivityDetails = document.getElementById("other-activity-details");
+      if (this.value === "Other") {
+        otherActivityDetails.style.display = "block";
+      } else {
+        otherActivityDetails.style.display = "none";
+      }
+    });
+  </script>
+
+</body>
+</html>
